@@ -10,11 +10,7 @@
                             swatch.key !== value,
                     }"
                     :style="{ 'background-color': swatch.hex }"
-                    @click="
-                        () => {
-                            update(swatch.key);
-                        }
-                    "
+                    @click="update(swatch.key)"
                 >
                     <div
                         v-if="swatch.key === value"
@@ -44,22 +40,20 @@
 </template>
 
 <script>
+/* global Fieldtype */
 export default {
     mixins: [Fieldtype],
 
     data() {
         return {
-            swatches: this.getSwatchesAsArray(),
+            customColor: this.value,
         };
     },
 
-    watch: {
-        value(value) {
-            this.customColor = value;
-        },
-    },
-
     computed: {
+        swatches() {
+            return this.getSwatchesAsArray();
+        },
         replicatorPreview() {
             const color = this.getHexColor(this.value);
 
@@ -79,7 +73,6 @@ export default {
         },
 
         getHexColor(color) {
-            console.log("🚀 ~ getHexColor ~ color:", color);
             return this.config.swatches[color];
         },
 

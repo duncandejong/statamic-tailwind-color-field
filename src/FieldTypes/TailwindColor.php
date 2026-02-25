@@ -6,6 +6,8 @@ use Statamic\Fields\Fieldtype;
 
 class TailwindColor extends Fieldtype
 {
+    protected static $handle = 'tailwind_color';
+    protected $component = 'tailwind_color-fieldtype';
     protected $categories = ['special'];
 
     public function icon()
