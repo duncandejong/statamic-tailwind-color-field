@@ -1,30 +1,30 @@
 {
-  "name": "pixelpillow/statamic-tailwind-color-field",
-  "description": "This Statamic field type lets you choose Tailwind color names for use in the frontend.",
-  "autoload": {
-    "psr-4": {
-      "Pixelpillow\\StatamicTailwindColorSelector\\": "src"
-    }
-  },
-  "extra": {
-    "statamic": {
-      "name": "Tailwind Color Selector field",
-      "description": "This Statamic field type lets you choose Tailwind color names for use in the frontend."
+    "name": "pixelpillow/statamic-tailwind-color-field",
+    "description": "This Statamic field type lets you choose Tailwind color names for use in the frontend.",
+    "autoload": {
+        "psr-4": {
+            "Pixelpillow\\StatamicTailwindColorSelector\\": "src"
+        }
     },
-    "laravel": {
-      "providers": [
-        "Pixelpillow\\StatamicTailwindColorSelector\\ServiceProvider"
-      ]
+    "extra": {
+        "statamic": {
+            "name": "Tailwind Color Selector field",
+            "description": "This Statamic field type lets you choose Tailwind color names for use in the frontend."
+        },
+        "laravel": {
+            "providers": [
+                "Pixelpillow\\StatamicTailwindColorSelector\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "statamic/cms": "^v6.0",
+        "pixelfear/composer-dist-plugin": "^0.1.6"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
     }
-  },
-  "require": {},
-  "require-dev": {
-    "statamic/cms": "^v6.0",
-    "pixelfear/composer-dist-plugin": "^0.1.6"
-  },
-  "config": {
-    "allow-plugins": {
-      "pixelfear/composer-dist-plugin": true
-    }
-  }
 }

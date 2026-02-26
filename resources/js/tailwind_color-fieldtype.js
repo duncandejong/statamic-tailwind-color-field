@@ -5,4 +5,5 @@ import Fieldtype from "./TailwindColor.vue";
 
 Statamic.booting(() => {
     Statamic.$components.register('tailwind_color-fieldtype', Fieldtype);
+    Statamic.$components.register('tailwind_color-fieldtype-fieldtype', Fieldtype);
 });
