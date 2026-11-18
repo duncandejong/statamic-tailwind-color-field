@@ -10,7 +10,7 @@ class TailwindColor extends Fieldtype
 
     protected $categories = ['special'];
 
-    public function icon()
+    public function icon(): false|string
     {
         return file_get_contents(__DIR__.'/../../resources/svg/tailwind-logo.svg');
     }

@@ -15,7 +15,7 @@ class ServiceProvider extends AddonServiceProvider
         'hotFile' => __DIR__.'/../resources/dist/hot',
     ];
 
-    public function bootAddon()
+    public function bootAddon(): void
     {
         TailwindColor::register();
     }
