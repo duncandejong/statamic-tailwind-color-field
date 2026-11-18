@@ -1,7 +1,18 @@
 {
     "name": "dtaildesign/statamic-tailwind-color-field",
-    "description": "This Statamic field type lets you choose Tailwind color names for use in the frontend.",
+    "description": "Choose predefined Tailwind CSS colors in Statamic blueprints.",
+    "homepage": "https://github.com/duncandejong/statamic-tailwind-color-field",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "DTAIL Design",
+            "homepage": "https://github.com/duncandejong"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/duncandejong/statamic-tailwind-color-field/issues",
+        "source": "https://github.com/duncandejong/statamic-tailwind-color-field"
+    },
     "autoload": {
         "psr-4": {
             "DtailDesign\\StatamicTailwindColorField\\": "src"
@@ -9,8 +20,10 @@
     },
     "extra": {
         "statamic": {
-            "name": "Tailwind Color Selector field",
-            "description": "This Statamic field type lets you choose Tailwind color names for use in the frontend."
+            "name": "Tailwind Color Field",
+            "description": "Choose predefined Tailwind CSS colors in Statamic blueprints.",
+            "developer": "DTAIL Design",
+            "developer-url": "https://github.com/duncandejong"
         },
         "laravel": {
             "providers": [

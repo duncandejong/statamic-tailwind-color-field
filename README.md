@@ -1,6 +1,6 @@
-# Tailwind color Field
+# Statamic Tailwind Color Field
 
-Tailwind color field is a Statamic addon that lets you define your Tailwind colors and use them in your blueprints.
+Choose predefined Tailwind CSS colors from a convenient field in your Statamic blueprints.
 
 This branch targets Statamic 6, Vue 3, and PHP 8.3 or newer.
 
