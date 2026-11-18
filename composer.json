@@ -1,9 +1,10 @@
 {
-    "name": "pixelpillow/statamic-tailwind-color-field",
+    "name": "dtaildesign/statamic-tailwind-color-field",
     "description": "This Statamic field type lets you choose Tailwind color names for use in the frontend.",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Pixelpillow\\StatamicTailwindColorSelector\\": "src"
+            "DtailDesign\\StatamicTailwindColorField\\": "src"
         }
     },
     "extra": {
@@ -13,13 +14,15 @@
         },
         "laravel": {
             "providers": [
-                "Pixelpillow\\StatamicTailwindColorSelector\\ServiceProvider"
+                "DtailDesign\\StatamicTailwindColorField\\ServiceProvider"
             ]
         }
     },
-    "require": {},
+    "require": {
+        "php": "^8.3",
+        "statamic/cms": "^6.0"
+    },
     "require-dev": {
-        "statamic/cms": "^v6.0",
         "pixelfear/composer-dist-plugin": "^0.1.6"
     },
     "config": {

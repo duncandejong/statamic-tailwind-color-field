@@ -38,33 +38,29 @@
     </div>
 </template>
 
-<script setup>
-import {computed, getCurrentInstance} from 'vue';
-import {FieldtypeMixin} from '@statamic/cms';
+<script>
+import { FieldtypeMixin } from '@statamic/cms';
 
-// Allow mixins in <script setup>
-defineOptions({
+export default {
     mixins: [FieldtypeMixin],
-});
 
-// Access mixin-provided properties (value, config, update)
-const {proxy} = getCurrentInstance();
+    computed: {
+        swatches() {
+            if (!this.config.swatches) {
+                return null;
+            }
 
-const value = computed(() => proxy.value);
-const config = computed(() => proxy.config);
+            return Object.entries(this.config.swatches).map(([key, hex]) => ({
+                key,
+                hex,
+            }));
+        },
+    },
 
-const swatches = computed(() => {
-    if (!config.value?.swatches) {
-        return null;
-    }
-
-    return Object.keys(config.value.swatches).map((key) => ({
-        key,
-        hex: config.value.swatches[key],
-    }));
-});
-
-function updateValue(val) {
-    proxy.update(val);
-}
+    methods: {
+        updateValue(value) {
+            this.update(value);
+        },
+    },
+};
 </script>

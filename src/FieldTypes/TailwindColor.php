@@ -1,6 +1,6 @@
 <?php
 
-namespace Pixelpillow\StatamicTailwindColorSelector\FieldTypes;
+namespace DtailDesign\StatamicTailwindColorField\FieldTypes;
 
 use Statamic\Fields\Fieldtype;
 
@@ -8,12 +8,11 @@ class TailwindColor extends Fieldtype
 {
     protected static $handle = 'tailwind_color';
 
-    protected $component = 'tailwind_color-fieldtype';
     protected $categories = ['special'];
 
     public function icon()
     {
-        return file_get_contents(__DIR__ . '/../../resources/svg/tailwind-logo.svg');
+        return file_get_contents(__DIR__.'/../../resources/svg/tailwind-logo.svg');
     }
 
     protected function configFieldItems(): array

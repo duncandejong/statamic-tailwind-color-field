@@ -1,8 +1,8 @@
 <?php
 
-namespace Pixelpillow\StatamicTailwindColorSelector;
+namespace DtailDesign\StatamicTailwindColorField;
 
-use Pixelpillow\StatamicTailwindColorSelector\FieldTypes\TailwindColor;
+use DtailDesign\StatamicTailwindColorField\FieldTypes\TailwindColor;
 use Statamic\Providers\AddonServiceProvider;
 
 class ServiceProvider extends AddonServiceProvider
