@@ -1,9 +1,5 @@
-import Fieldtype from "./TailwindColor.vue";
-
-// Should be named [snake_case_handle]-fieldtype
-// Statamic.$components.register("tailwind_color-fieldtype", Fieldtype);
+import Fieldtype from './TailwindColor.vue';
 
 Statamic.booting(() => {
-    Statamic.$components.register('tailwind_color-fieldtype', Fieldtype);
-    Statamic.$components.register('tailwind_color-fieldtype-fieldtype', Fieldtype);
+    Statamic.component('tailwind_color-fieldtype', Fieldtype);
 });
